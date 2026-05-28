@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mariana Rodeio - Executiva de RH especializada em Talent Management, Cultura Organizacional, Organizational Effectiveness, Engajamento e Diversidade & Inclusão. Liderança regional América do Sul.">
+  <meta name="keywords" content="RH, Talent Management, Cultura Organizacional, Diversidade Inclusão, Engajamento, América do Sul, Executiva RH, Mentoria Carreira">
+  <meta name="author" content="Mariana Rodeio">
+  <meta property="og:title" content="Mariana Rodeio | Executiva de RH">
+  <meta property="og:description" content="Talent Management · Cultura Organizacional · Diversidade & Inclusão · Liderança Regional América do Sul">
+  <meta property="og:url" content="https://marianarodeio.com.br">
+  <meta property="og:type" content="website">
+  <title>Mariana Rodeio | Executiva de RH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --gold:#B8945A;--gold-light:#D4AE7A;--gold-pale:#F5EFE4;
+      --ink:#1A1612;--ink-mid:#3D3530;--ink-soft:#6B6158;
+      --stone:#EAE5DC;--stone-mid:#D6CFC4;--white:#FAFAF8;
+      --accent:#5C4A3A;
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'DM Sans',system-ui,sans-serif;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--sans);background:var(--white);color:var(--ink);min-height:100vh;}
+    .portfolio{max-width:860px;margin:0 auto;}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:0.5px solid var(--stone-mid);padding:10px 24px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+    .nav-btn{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-soft);background:none;border:none;cursor:pointer;padding:4px 9px;border-radius:20px;transition:all 0.2s;white-space:nowrap;}
+    .nav-btn:hover,.nav-btn.active{background:var(--gold-pale);color:var(--gold);}
+    .nav-sep{color:var(--stone-mid);font-size:10px;}
+
+    /* PAGES */
+    .page{display:none;padding:52px 40px;min-height:560px;animation:fadeIn 0.35s ease;}
+    .page.active{display:block;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+    /* CAPA */
+    .capa{background:var(--ink);color:var(--white);padding:64px 40px 56px;position:relative;overflow:hidden;}
+    .capa::before{content:'';position:absolute;top:0;right:0;width:280px;height:280px;border-left:1px solid rgba(184,148,90,0.18);border-bottom:1px solid rgba(184,148,90,0.18);border-radius:0 0 0 280px;}
+    .capa::after{content:'';position:absolute;bottom:-50px;left:-30px;width:180px;height:180px;border:1px solid rgba(184,148,90,0.09);border-radius:50%;}
+    .capa-eyebrow{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:400;}
+    .capa-name{font-family:var(--serif);font-size:60px;font-weight:300;line-height:1.05;color:var(--white);margin-bottom:6px;}
+    .capa-name em{font-style:italic;color:var(--gold-light);}
+    .capa-divider{width:50px;height:1px;background:var(--gold);margin:22px 0;}
+    .capa-header-label{font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:10px;}
+    .capa-specs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px;}
+    .capa-spec{font-size:10px;letter-spacing:0.07em;padding:5px 12px;border:0.5px solid rgba(184,148,90,0.4);color:rgba(255,255,255,0.75);border-radius:20px;background:rgba(184,148,90,0.07);}
+    .capa-bottom{display:flex;gap:36px;flex-wrap:wrap;}
+    .capa-stat-num{font-family:var(--serif);font-size:34px;font-weight:300;color:var(--gold-light);display:block;line-height:1;}
+    .capa-stat-label{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.05em;}
+
+    /* HEADINGS */
+    .page-eyebrow{font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:400;}
+    .page-title{font-family:var(--serif);font-size:40px;font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:22px;}
+    .page-title em{font-style:italic;color:var(--gold);}
+    .divider{width:38px;height:1px;background:var(--gold);margin-bottom:28px;}
+    .lead{font-family:var(--serif);font-size:19px;font-weight:300;line-height:1.6;color:var(--ink-mid);margin-bottom:20px;}
+    .body-text{font-size:14.5px;line-height:1.78;color:var(--ink-soft);margin-bottom:14px;}
+    .section-sub{font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-soft);margin:24px 0 10px;font-weight:500;}
+
+    /* HIGHLIGHT */
+    .highlight-box{background:var(--gold-pale);border-left:2px solid var(--gold);padding:18px 22px;margin:20px 0;border-radius:0 8px 8px 0;}
+    .highlight-box p{font-family:var(--serif);font-size:17px;font-weight:300;font-style:italic;color:var(--ink-mid);line-height:1.55;}
+
+    /* TIMELINE */
+    .timeline-item{display:grid;grid-template-columns:90px 1fr;gap:20px;margin-bottom:24px;padding-bottom:24px;border-bottom:0.5px solid var(--stone);align-items:start;}
+    .timeline-item:last-child{border-bottom:none;}
+    .timeline-year{font-family:var(--serif);font-size:12px;font-weight:300;color:var(--gold);padding-top:3px;line-height:1.3;text-align:right;}
+    .timeline-role{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:2px;}
+    .timeline-company{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
+    .timeline-text{font-size:13px;line-height:1.68;color:var(--ink-soft);}
+    .timeline-badge{display:inline-block;background:var(--gold-pale);color:var(--accent);font-size:10px;padding:2px 9px;border-radius:20px;margin-bottom:6px;}
+
+    /* GRIDS */
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:20px 0;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0;}
+
+    /* CARDS */
+    .card{background:var(--white);border:0.5px solid var(--stone-mid);border-radius:12px;padding:18px 20px;}
+    .card-title{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);margin-bottom:7px;line-height:1.2;}
+    .card-body{font-size:13px;line-height:1.65;color:var(--ink-soft);}
+
+    /* PILLARS */
+    .pillars-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0;}
+    .pillar{padding:20px 14px;background:var(--stone);border-radius:12px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+    .pillar-num{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--gold);margin-bottom:6px;}
+    .pillar-title{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);margin-bottom:7px;}
+    .pillar-body{font-size:12px;line-height:1.6;color:var(--ink-soft);}
+
+    /* CASES */
+    .cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px;margin-top:22px;}
+    .case-header{background:var(--ink);border-radius:12px 12px 0 0;padding:18px 22px;}
+    .case-tag{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
+    .case-title-h{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--white);line-height:1.25;}
+    .case-body{background:var(--gold-pale);border-radius:0 0 12px 12px;padding:18px 22px;}
+    .case-metrics{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px;}
+    .case-metric-num{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--gold);display:block;line-height:1;}
+    .case-metric-label{font-size:10.5px;color:var(--ink-soft);}
+    .case-desc{font-size:13px;line-height:1.65;color:var(--ink-soft);}
+
+    /* SERVICE */
+    .service-hero{background:var(--ink);border-radius:12px;padding:28px 30px;margin-bottom:22px;}
+    .service-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .service-headline{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--white);line-height:1.2;margin-bottom:10px;}
+    .service-headline em{font-style:italic;color:var(--gold-light);}
+    .service-desc{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,0.62);margin-bottom:12px;}
+    .service-problems{margin-top:12px;padding-top:12px;border-top:0.5px solid rgba(255,255,255,0.1);}
+    .service-problems-title{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px;}
+    .problem-item{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;padding:4px 0;display:flex;gap:8px;align-items:flex-start;}
+    .problem-dot{color:var(--gold);font-size:16px;line-height:1;flex-shrink:0;}
+
+    /* DELIVERABLES */
+    .deliverable-item{display:flex;align-items:flex-start;gap:11px;padding:10px 0;border-bottom:0.5px solid var(--stone);}
+    .deliverable-item:last-child{border-bottom:none;}
+    .del-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0;}
+    .del-text{font-size:13.5px;line-height:1.62;color:var(--ink-soft);}
+    .del-bold{font-weight:500;color:var(--ink);}
+
+    /* FOR WHO */
+    .for-who{background:var(--stone);border-radius:12px;padding:18px 22px;margin:18px 0;}
+    .for-who-title{font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .for-who-list{display:flex;flex-wrap:wrap;gap:7px;}
+    .for-tag{background:var(--white);border:0.5px solid var(--stone-mid);font-size:12px;padding:4px 11px;border-radius:20px;color:var(--ink-mid);}
+
+    /* MODALITIES */
+    .modalities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin:18px 0;}
+    .modality{border:0.5px solid var(--stone-mid);border-radius:10px;padding:15px 17px;}
+    .modality-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:4px;}
+    .modality-body{font-size:12px;color:var(--ink-soft);line-height:1.55;}
+
+    /* CONTACT */
+    .contact-block{background:var(--ink);border-radius:12px;padding:28px 30px;color:var(--white);margin-top:22px;}
+    .contact-item{display:flex;align-items:center;gap:16px;padding:12px 0;border-bottom:0.5px solid rgba(255,255,255,0.07);text-decoration:none;transition:all 0.2s;border-radius:6px;}
+    .contact-item:last-child{border-bottom:none;}
+    .contact-item:hover{background:rgba(184,148,90,0.08);padding-left:8px;padding-right:8px;margin-left:-8px;margin-right:-8px;}
+    .contact-icon-wrap{width:36px;height:36px;border-radius:8px;background:rgba(184,148,90,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
+    .contact-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.38);display:block;margin-bottom:2px;}
+    .contact-value{font-size:13.5px;color:var(--gold-light);}
+    .contact-arrow{margin-left:auto;color:rgba(184,148,90,0.4);font-size:14px;flex-shrink:0;}
+
+    /* MENTOR */
+    .mentor-stat{text-align:center;padding:18px;background:var(--stone);border-radius:12px;}
+    .mentor-stat-num{font-family:var(--serif);font-size:36px;font-weight:300;color:var(--gold);display:block;line-height:1;}
+    .mentor-stat-label{font-size:11px;color:var(--ink-soft);margin-top:5px;display:block;}
+
+    .method-box{background:var(--ink);border-radius:12px;padding:24px 28px;margin:20px 0;}
+    .method-title{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .method-step{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:0.5px solid rgba(255,255,255,0.08);}
+    .method-step:last-child{border-bottom:none;}
+    .method-num{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--gold-light);flex-shrink:0;width:28px;}
+    .method-step-title{font-size:13px;font-weight:500;color:var(--white);margin-bottom:3px;}
+    .method-step-body{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;}
+
+    .corp-box{background:var(--gold-pale);border-radius:12px;padding:24px 28px;margin:20px 0;border:0.5px solid var(--gold-light);}
+    .corp-title{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);margin-bottom:8px;}
+    .corp-body{font-size:13.5px;line-height:1.7;color:var(--ink-soft);margin-bottom:16px;}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+
+    /* MOBILE */
+    @media(max-width:640px){
+      .page{padding:36px 20px;}
+      .capa{padding:48px 20px 44px;}
+      .capa-name{font-size:42px;}
+      .page-title{font-size:32px;}
+      .two-col,.pillars-wrap,.grid-3{grid-template-columns:1fr;}
+      .nav{padding:10px 16px;}
+      .timeline-item{grid-template-columns:72px 1fr;gap:12px;}
+      .cases-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<div class="portfolio">
+
+  <nav class="nav" role="navigation" aria-label="Navegação do portfólio">
+    <button class="nav-btn active" onclick="showPage('capa',this)">Capa</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('quem',this)">Quem sou</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('trajetoria',this)">Trajetória</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('valor',this)">Proposta de Valor</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('areas',this)">Áreas</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('cases',this)">Cases</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('talent',this)">Talent as a Service</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('culture',this)">Culture as a Service</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('inclusion',this)">Inclusion as a Service</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('mentoria',this)">Mentoria</button>
+    <span class="nav-sep">·</span>
+    <button class="nav-btn" onclick="showPage('contato',this)">Contato</button>
+  </nav>
+
+  <!-- CAPA -->
+  <div id="page-capa" class="page capa active">
+    <p class="capa-eyebrow">Portfólio de Carreira · Executiva de Recursos Humanos</p>
+    <h1 class="capa-name">Mariana<br><em>Rodeio</em></h1>
+    <div class="capa-divider"></div>
+    <p class="capa-header-label">Especialidades</p>
+    <div class="capa-specs">
+      <span class="capa-spec">Executiva de RH</span>
+      <span class="capa-spec">Talent Management</span>
+      <span class="capa-spec">Cultura Organizacional</span>
+      <span class="capa-spec">Organizational Effectiveness</span>
+      <span class="capa-spec">Desenvolvimento de Lideranças</span>
+      <span class="capa-spec">Engajamento</span>
+      <span class="capa-spec">Diversidade &amp; Inclusão</span>
+      <span class="capa-spec">Mestranda FGV</span>
+    </div>
+    <div class="capa-bottom">
+      <div><span class="capa-stat-num">10+</span><span class="capa-stat-label">anos em RH na BAT</span></div>
+      <div><span class="capa-stat-num">6k</span><span class="capa-stat-label">colaboradores em 5 países</span></div>
+      <div><span class="capa-stat-num">88%</span><span class="capa-stat-label">participação em pesquisa de engajamento</span></div>
+      <div><span class="capa-stat-num">100+</span><span class="capa-stat-label">profissionais mentorados</span></div>
+    </div>
+  </div>
+
+  <!-- QUEM SOU -->
+  <div id="page-quem" class="page">
+    <p class="page-eyebrow">01 · Sobre</p>
+    <h2 class="page-title">Quem <em>sou</em></h2>
+    <div class="divider"></div>
+    <p class="lead">Sou executiva de Recursos Humanos com mais de 10 anos de atuação em ambientes corporativos complexos, construída dentro de uma das maiores multinacionais do mundo, com responsabilidade regional para a América do Sul.</p>
+    <p class="body-text">Ao longo dessa trajetória na BAT, estive dentro das conversas onde carreiras avançam, ganham visibilidade, estagnam ou mudam de direção. Participei diretamente de discussões sobre performance, potencial, sucessão, liderança, cultura e desenvolvimento organizacional. Essa vivência construiu uma leitura muito prática sobre como crescimento profissional acontece de fato dentro das organizações.</p>
+    <p class="body-text">Porque carreira não envolve apenas competência. Envolve contexto, percepção e posicionamento. E a forma como o sistema lê influência, prontidão e valor.</p>
+    <div class="highlight-box"><p>"Muitos profissionais altamente competentes não enfrentam um problema de capacidade técnica. O desafio está na dificuldade de sustentar visibilidade estratégica, construir reconhecimento proporcional à entrega e navegar dinâmicas organizacionais cada vez mais complexas."</p></div>
+    <p class="body-text">Hoje amplio essa lente através da pesquisa acadêmica. No mestrado na FGV, investigo como a aprendizagem ao longo da vida adulta influencia decisões de carreira e desenvolvimento em contextos de transformação constante. Esse cruzamento entre prática organizacional, desenvolvimento profissional e pesquisa orienta minha forma de atuar.</p>
+    <div class="two-col" style="margin-top:24px;">
+      <div>
+        <p class="section-sub">Além do corporativo</p>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text">Mentora no eMentor.br com mais de 100 profissionais acompanhados em posicionamento estratégico e progressão de carreira</p></div>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text">Autora da newsletter Sem Rodeios com reflexões sobre carreira, liderança e as dinâmicas invisíveis que moldam reconhecimento e influência</p></div>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text">Pesquisadora na UFRJ entre 2015 e 2017 sobre mercado de trabalho, gênero e raça</p></div>
+      </div>
+      <div>
+        <p class="section-sub">Formação</p>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><strong>Mestrado Profissional em Gestão Empresarial na FGV</strong> com pesquisa sobre aprendizagem ao longo da vida. Conclusão prevista em 2027.</p></div>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><strong>Pós-graduação em Gestão Estratégica de RH na FIA Business School</strong></p></div>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><strong>Ciências Econômicas na UFRJ</strong></p></div>
+        <div class="deliverable-item"><div class="del-dot"></div><p class="del-text">Inglês fluente e espanhol avançado</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAJETÓRIA -->
+  <div id="page-trajetoria" class="page">
+    <p class="page-eyebrow">02 · Experiência</p>
+    <h2 class="page-title">Minha <em>trajetória</em></h2>
+    <div class="divider"></div>
+    <p class="lead">Mais de 10 anos dentro da BAT, do estágio ao cargo executivo regional. Uma carreira construída com intencionalidade dentro de um dos ambientes corporativos mais exigentes do mundo.</p>
+    <div class="timeline-item">
+      <div class="timeline-year">Atual<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">Em curso</span></div>
+      <div><span class="timeline-badge">Em andamento simultâneo</span>
+        <p class="timeline-role">Mentora de Carreira e Liderança</p>
+        <p class="timeline-company">eMentor.br · 2025 até hoje</p>
+        <p class="timeline-text">Mais de 100 profissionais acompanhados em posicionamento estratégico, desbloqueio de promoções e progressão de carreira. Foco em profissionais de alto desempenho cuja evolução estava travada por invisibilidade estratégica e não por falta de competência técnica.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">Atual<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">Em curso</span></div>
+      <div><span class="timeline-badge">Em andamento simultâneo</span>
+        <p class="timeline-role">Mestranda em Gestão Empresarial</p>
+        <p class="timeline-company">Fundação Getulio Vargas · FGV · 2025 até 2027</p>
+        <p class="timeline-text">Pesquisa sobre aprendizagem ao longo da vida adulta e seu impacto em decisões de carreira e desenvolvimento profissional em contextos de transformação constante.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2024 a 2025<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">BAT</span></div>
+      <div>
+        <p class="timeline-role">Gerente de Cultura Organizacional, Engajamento e Inclusão</p>
+        <p class="timeline-company">British American Tobacco · Rio de Janeiro</p>
+        <p class="timeline-text">Atuação executiva na agenda de Cultura Organizacional, conectando engajamento, inclusão e comportamento organizacional à estratégia de negócio. Gestão da pesquisa Your Voice com 88% de participação. Estruturação dos Grupos de Cultura em três frentes: Educação, Suporte e Crescimento.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2022 a 2025<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">BAT</span></div>
+      <div>
+        <p class="timeline-role">Talent, OE &amp; Inclusion Manager · América do Sul</p>
+        <p class="timeline-company">British American Tobacco · Rio de Janeiro</p>
+        <p class="timeline-text">Responsável pela gestão de talentos para Brasil, Argentina, Chile, Peru e Paraguai, totalizando 6 mil colaboradores. Liderança dos processos de performance, desenvolvimento de liderança, engajamento, retenção e marca empregadora. Certificação Top Employer. Líder da agenda de Diversidade e Inclusão para a América do Sul.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2021 a 2022<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">BAT</span></div>
+      <div>
+        <p class="timeline-role">HR Business Partner · Logística, NPI, Suprimentos e EHS</p>
+        <p class="timeline-company">British American Tobacco · São Paulo</p>
+        <p class="timeline-text">Parceira estratégica de RH com atuação remota influenciando lideranças no Brasil, Chile e Argentina. Soluções nos pilares de atração, desenvolvimento de liderança, engajamento, retenção, clima e desenho organizacional.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2019 a 2021<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">BAT</span></div>
+      <div>
+        <p class="timeline-role">HR Business Partner Coordinator · Operações</p>
+        <p class="timeline-company">British American Tobacco · Mafra, SC</p>
+        <p class="timeline-text">Liderança da equipe de RH da unidade de processamento. Implementação de soluções em atração, desenvolvimento, engajamento e retenção. Facilitadora da estratégia de diversidade para a área.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2016 a 2019<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">BAT</span></div>
+      <div>
+        <p class="timeline-role">Analista de Talent Acquisition e Talent/OE</p>
+        <p class="timeline-company">British American Tobacco · Rio de Janeiro</p>
+        <p class="timeline-text">Gestão dos programas de estágio e trainee. Criação do painel de indicadores de diversidade. Participação ativa nos processos de performance e potencial.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2015 a 2016<br><span style="color:rgba(184,148,90,0.5);font-size:10px;">BAT</span></div>
+      <div>
+        <p class="timeline-role">Estagiária de RH em Remuneração e Reconhecimento</p>
+        <p class="timeline-company">British American Tobacco · Rio de Janeiro</p>
+        <p class="timeline-text">Ponto focal regional para mais de 8 mercados. Consolidação e análise de informações de Remuneração, Desempenho e Reconhecimento.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROPOSTA DE VALOR -->
+  <div id="page-valor" class="page">
+    <p class="page-eyebrow">03 · Diferencial</p>
+    <h2 class="page-title">Minha proposta<br>de <em>valor</em></h2>
+    <div class="divider"></div>
+    <div class="highlight-box"><p>Trago a leitura de quem esteve dentro das conversas que definem carreiras e organizações, com a capacidade de transformar essa leitura em estratégia, programa e resultado concreto.</p></div>
+    <p class="body-text" style="margin-top:18px;">Mais de 10 anos em uma grande multinacional me deram uma perspectiva que vai além da especialidade técnica: entender como as organizações realmente funcionam. Sei como cultura se sustenta ou se desintegra. Sei como talentos ganham ou perdem visibilidade. Sei como diversidade e inclusão evoluem de intenção para prática.</p>
+    <p class="body-text">E sei traduzir tudo isso em ação, com rigor metodológico, sensibilidade humana e conexão direta com os objetivos do negócio.</p>
+    <div class="pillars-wrap">
+      <div class="pillar"><div class="pillar-num">01</div><div class="pillar-title">Leitura Organizacional</div><div class="pillar-body">Entendo o jogo político e cultural das organizações e sei usar essa leitura a favor das pessoas e do negócio.</div></div>
+      <div class="pillar"><div class="pillar-num">02</div><div class="pillar-title">Escala Regional Real</div><div class="pillar-body">Experiência efetiva em 5 países da América do Sul com contextos regulatórios e culturais distintos.</div></div>
+      <div class="pillar"><div class="pillar-num">03</div><div class="pillar-title">Trilha Dupla</div><div class="pillar-body">HRBP mais CoE: proximidade com o negócio e profundidade técnica em Talent, Cultura e Diversidade.</div></div>
+      <div class="pillar"><div class="pillar-num">04</div><div class="pillar-title">Da Estratégia à Prática</div><div class="pillar-body">Combino diagnóstico, design e implementação do conceito ao resultado mensurável.</div></div>
+      <div class="pillar"><div class="pillar-num">05</div><div class="pillar-title">Pesquisa Aplicada</div><div class="pillar-body">Mestrado na FGV conectando teoria e prática. Decisões baseadas em evidência e não em intuição.</div></div>
+      <div class="pillar"><div class="pillar-num">06</div><div class="pillar-title">Certificação de Mercado</div><div class="pillar-body">Processos reconhecidos com certificação Top Employer, referência internacional de excelência em RH.</div></div>
+    </div>
+  </div>
+
+  <!-- ÁREAS -->
+  <div id="page-areas" class="page">
+    <p class="page-eyebrow">04 · Especialidades</p>
+    <h2 class="page-title">Principais áreas<br>de <em>atuação</em></h2>
+    <div class="divider"></div>
+    <p class="lead">Seis frentes estratégicas. Profundidade real. Entrega comprovada em escala regional.</p>
+    <div class="grid-2" style="margin-top:22px;">
+      <div class="card"><p class="card-title">Talent Management</p><p class="card-body">Desenvolvimento de lideranças, gestão de performance, planejamento de sucessão, gestão de carreira e retenção de talentos críticos. Processos certificados como Top Employer.</p></div>
+      <div class="card"><p class="card-title">Cultura Organizacional</p><p class="card-body">Diagnóstico, design e ativação de cultura. Criação de Grupos de Cultura, rituais e programas de pertencimento. Tradução de cultura declarada em cultura vivida.</p></div>
+      <div class="card"><p class="card-title">Engajamento de Pessoas</p><p class="card-body">Gestão de pesquisa de engajamento com 88% de participação regional. Análise de dados, planos de ação e acompanhamento de indicadores de confiança e segurança psicológica.</p></div>
+      <div class="card"><p class="card-title">Diversidade e Inclusão</p><p class="card-body">Estratégia regional para 5 países da América do Sul com diagnóstico, metas, programas para grupos sub-representados e agenda sustentável integrada ao negócio.</p></div>
+      <div class="card"><p class="card-title">Organizational Effectiveness</p><p class="card-body">Diagnóstico de saúde organizacional, desenho de estruturas, redesenho de papéis e acompanhamento de processos de transformação. Integração entre eficiência estrutural e experiência das pessoas.</p></div>
+      <div class="card"><p class="card-title">HR Business Partnering</p><p class="card-body">Parceria estratégica com lideranças em logística, operações, suprimentos e EHS. Diagnóstico organizacional, influência sem autoridade formal e gestão de mudança em contextos multiculturais.</p></div>
+    </div>
+  </div>
+
+  <!-- CASES -->
+  <div id="page-cases" class="page">
+    <p class="page-eyebrow">05 · Resultados</p>
+    <h2 class="page-title">Cases de <em>impacto</em></h2>
+    <div class="divider"></div>
+    <p class="lead">Resultados que provam que estratégia de pessoas, quando bem executada, move o negócio.</p>
+    <div class="cases-grid">
+      <div>
+        <div class="case-header"><p class="case-tag">Engajamento · Your Voice · BAT América do Sul</p><p class="case-title-h">Como transformamos escuta em ação e atingimos 88% de participação regional</p></div>
+        <div class="case-body"><div class="case-metrics"><div><span class="case-metric-num">88%</span><span class="case-metric-label">de participação</span></div><div><span class="case-metric-num">5</span><span class="case-metric-label">países</span></div><div><span class="case-metric-num">6k</span><span class="case-metric-label">colaboradores</span></div></div><p class="case-desc">Liderança da pesquisa de engajamento Your Voice com uma das maiores taxas de participação da região. Comunicação estratificada por país, capacitação de lideranças e planos de ação por unidade com foco em confiança, orgulho e colaboração.</p></div>
+      </div>
+      <div>
+        <div class="case-header"><p class="case-tag">Cultura Organizacional · Grupos de Cultura · BAT</p><p class="case-title-h">Como estruturamos uma cultura viva que vai além dos valores no cartaz</p></div>
+        <div class="case-body"><div class="case-metrics"><div><span class="case-metric-num">3</span><span class="case-metric-label">frentes: Educação, Suporte e Crescimento</span></div></div><p class="case-desc">Estruturação e expansão dos Grupos de Cultura com integração de mentoria interna, treinamentos e desenvolvimento. Rituais de escuta ativa e reconhecimento que tornaram a cultura parte do dia a dia.</p></div>
+      </div>
+      <div>
+        <div class="case-header"><p class="case-tag">Diversidade e Inclusão · Estratégia Regional · BAT América do Sul</p><p class="case-title-h">Como construímos uma agenda de D&amp;I que saiu do papel em 5 países</p></div>
+        <div class="case-body"><div class="case-metrics"><div><span class="case-metric-num">5</span><span class="case-metric-label">países com agenda estruturada</span></div></div><p class="case-desc">Desenvolvimento da estratégia regional do diagnóstico à definição de metas, criação de programas para grupos sub-representados, capacitação de líderes e construção de indicadores em contextos culturais distintos.</p></div>
+      </div>
+      <div>
+        <div class="case-header"><p class="case-tag">Talent Management · Top Employer · BAT América do Sul</p><p class="case-title-h">Como entregamos um ciclo de talentos regional reconhecido como referência de mercado</p></div>
+        <div class="case-body"><div class="case-metrics"><div><span class="case-metric-num">Top</span><span class="case-metric-label">Employer certificado</span></div><div><span class="case-metric-num">5</span><span class="case-metric-label">países</span></div></div><p class="case-desc">Liderança dos processos de performance, desenvolvimento, sucessão e marca empregadora para a América do Sul, com certificação Top Employer. Programas customizados por país e nível de liderança.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TALENT AS A SERVICE -->
+  <div id="page-talent" class="page">
+    <p class="page-eyebrow">06 · As a Service</p>
+    <h2 class="page-title">Talent Management<br><em>as a Service</em></h2>
+    <div class="divider"></div>
+    <div class="service-hero">
+      <p class="service-label">Para quem precisa de especialização sem contratar em regime permanente</p>
+      <p class="service-headline">A expertise de uma executiva de Talent Management <em>aplicada ao seu contexto</em></p>
+      <p class="service-desc">Ideal para organizações que precisam estruturar ou evoluir a agenda de Talent Management com profundidade técnica, agilidade e sem os custos de uma contratação permanente.</p>
+      <div class="service-problems">
+        <p class="service-problems-title">Problemas que este serviço resolve</p>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Líderes sendo promovidos sem critério claro, gerando insatisfação e aumento de turnover</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Processos de avaliação de performance que não orientam desenvolvimento nem refletem contribuição real</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Perda de talentos críticos por falta de plano de carreira ou reconhecimento estruturado</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Ausência de mapa de sucessão deixando a organização vulnerável a saídas inesperadas</span></div>
+      </div>
+    </div>
+    <p class="section-sub">O que posso entregar</p>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Diagnóstico de Talent Management</span> com mapeamento do estado atual, lacunas críticas e recomendações priorizadas</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Ciclo de gestão de performance</span> com estruturação da metodologia, treinamento de líderes e acompanhamento da implementação</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Programas de desenvolvimento de liderança</span> com design, facilitação e acompanhamento de resultados</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Planejamento de sucessão</span> com metodologia, calibração de talentos e planos de ação individuais</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Estratégia de retenção</span> com análise de turnover, diagnóstico de risco e planos de retenção de talentos críticos</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Trilhas e gestão de carreira</span> com framework, conversas de desenvolvimento e critérios claros de progressão</p></div>
+    <div class="for-who"><p class="for-who-title">Indicado para</p><div class="for-who-list"><span class="for-tag">Empresas em crescimento acelerado</span><span class="for-tag">Organizações em transformação</span><span class="for-tag">Operações regionais sem time de talentos local</span><span class="for-tag">RH em processo de estruturação</span></div></div>
+  </div>
+
+  <!-- CULTURE AS A SERVICE -->
+  <div id="page-culture" class="page">
+    <p class="page-eyebrow">07 · As a Service</p>
+    <h2 class="page-title">Culture &amp; Engagement<br><em>as a Service</em></h2>
+    <div class="divider"></div>
+    <div class="service-hero">
+      <p class="service-label">Cultura não é cartaz. É prática.</p>
+      <p class="service-headline">Transforme cultura declarada <em>em cultura vivida</em></p>
+      <p class="service-desc">Já estruturei Grupos de Cultura, conduzi pesquisas de engajamento com 88% de participação e desenhei rituais que passaram a fazer parte do DNA de uma organização com 6 mil pessoas.</p>
+      <div class="service-problems">
+        <p class="service-problems-title">Problemas que este serviço resolve</p>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Cultura declarada que não se reflete no comportamento das lideranças nem no dia a dia das equipes</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Queda no engajamento sem clareza sobre as causas reais nem plano de ação estruturado</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Integração cultural travada em processos de fusão, aquisição ou reestruturação</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Ausência de práticas de escuta que geram distância entre liderança e times</span></div>
+      </div>
+    </div>
+    <p class="section-sub">O que posso entregar</p>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Diagnóstico de Cultura Organizacional</span> com entrevistas, dados e análise do gap entre cultura declarada e vivida</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Gestão de pesquisa de engajamento</span> da concepção à análise, planos de ação e acompanhamento de indicadores</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Estruturação de Grupos de Cultura e comitês</span> com governança, propósito, frentes de atuação e ativação</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Programas de pertencimento e escuta ativa</span> com iniciativas que criam conexão real e segurança psicológica</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Design de rituais culturais</span> com práticas recorrentes que reforçam valores no cotidiano organizacional</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Cultura em contextos de transformação</span> com integração cultural em processos de reestruturação ou mudança de modelo</p></div>
+    <div class="for-who"><p class="for-who-title">Indicado para</p><div class="for-who-list"><span class="for-tag">Empresas em fusão ou aquisição</span><span class="for-tag">Organizações com engajamento em queda</span><span class="for-tag">Culturas que precisam escalar sem perder a essência</span><span class="for-tag">Ambientes em transição de modelo de trabalho</span></div></div>
+  </div>
+
+  <!-- INCLUSION AS A SERVICE -->
+  <div id="page-inclusion" class="page">
+    <p class="page-eyebrow">08 · As a Service</p>
+    <h2 class="page-title">Diversity &amp; Inclusion<br><em>as a Service</em></h2>
+    <div class="divider"></div>
+    <div class="service-hero">
+      <p class="service-label">Diversidade e Inclusão que vai além do relatório anual</p>
+      <p class="service-headline">Uma agenda de Inclusão que gera <em>impacto real</em> e não só intenção</p>
+      <p class="service-desc">Liderei a estratégia regional de Diversidade e Inclusão da BAT para a América do Sul: 5 países, contextos culturais distintos, realidades regulatórias diferentes.</p>
+      <div class="service-problems">
+        <p class="service-problems-title">Problemas que este serviço resolve</p>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Ações de D&amp;I pontuais e desconectadas de uma estratégia de longo prazo</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Sub-representação em posições de liderança sem plano claro de aceleração e visibilidade</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Lideranças sem preparo para conduzir conversas e práticas inclusivas no dia a dia</span></div>
+        <div class="problem-item"><span class="problem-dot">·</span><span>Processos de recrutamento, promoção e avaliação com vieses não identificados e não tratados</span></div>
+      </div>
+    </div>
+    <p class="section-sub">O que posso entregar</p>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Diagnóstico de maturidade em D&amp;I</span> com mapeamento de lacunas críticas e ponto de partida estratégico</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Estratégia e plano de ação de D&amp;I</span> com visão, metas e indicadores de evolução</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Programas para grupos sub-representados</span> com desenvolvimento, mentoria, visibilidade e aceleração de carreira</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Capacitação de lideranças</span> em viés inconsciente, linguagem inclusiva e práticas equitativas de gestão</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Revisão de processos com lente de equidade</span> em recrutamento, promoção, avaliação de performance e retenção</p></div>
+    <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Estruturação de grupos de afinidade</span> com governança, propósito e integração com a estratégia de negócio</p></div>
+    <div class="for-who"><p class="for-who-title">Indicado para</p><div class="for-who-list"><span class="for-tag">Empresas iniciando a agenda de D&amp;I</span><span class="for-tag">RH sem especialista dedicado</span><span class="for-tag">Operações com múltiplas realidades culturais</span><span class="for-tag">Evoluindo de ações pontuais para estratégia</span></div></div>
+  </div>
+
+  <!-- MENTORIA -->
+  <div id="page-mentoria" class="page">
+    <p class="page-eyebrow">09 · Mentoria</p>
+    <h2 class="page-title">Mentoria de Carreira<br>e <em>Liderança</em></h2>
+    <div class="divider"></div>
+    <p class="lead">Acompanho profissionais de alto desempenho que entregam consistentemente acima da média, mas encontram barreiras ligadas a posicionamento, visibilidade e leitura do jogo organizacional.</p>
+    <div class="highlight-box"><p>"A maioria dos profissionais que me procura não tem um problema de competência. Tem um problema de como é lido pelo sistema. E isso tem solução, quando você aprende a construir narrativa, posicionamento e visibilidade de forma estratégica e autêntica."</p></div>
+    <div class="grid-3" style="margin:22px 0;">
+      <div class="mentor-stat"><span class="mentor-stat-num">100+</span><span class="mentor-stat-label">profissionais acompanhados</span></div>
+      <div class="mentor-stat"><span class="mentor-stat-num">10+</span><span class="mentor-stat-label">anos lendo o jogo organizacional por dentro</span></div>
+      <div class="mentor-stat"><span class="mentor-stat-num">FGV</span><span class="mentor-stat-label">pesquisa em desenvolvimento e carreira</span></div>
+    </div>
+    <p class="section-sub">Meu método</p>
+    <div class="method-box">
+      <p class="method-title">Como o processo funciona na prática</p>
+      <div class="method-step"><div class="method-num">01</div><div><p class="method-step-title">Leitura do jogo organizacional</p><p class="method-step-body">Analiso a trajetória, o contexto organizacional e o que o sistema está lendo sobre você. Identifico onde está o gap real entre entrega e reconhecimento e o que está bloqueando a progressão.</p></div></div>
+      <div class="method-step"><div class="method-num">02</div><div><p class="method-step-title">Construção de narrativa e posicionamento estratégico</p><p class="method-step-body">Trabalho a construção de uma narrativa profissional que comunique valor com clareza, alinhada aos critérios reais de promoção e reconhecimento dentro da sua organização.</p></div></div>
+      <div class="method-step"><div class="method-num">03</div><div><p class="method-step-title">Plano de ação executável</p><p class="method-step-body">Defino com você um plano concreto em ciclos de 90 dias, coerente com sua identidade e com o momento da sua carreira. Sem prescrições genéricas, sem autopromoção artificial.</p></div></div>
+      <div class="method-step"><div class="method-num">04</div><div><p class="method-step-title">Preparação para momentos decisivos</p><p class="method-step-body">Preparo você para as conversas que definem carreiras: promoções, avaliações, entrevistas executivas e conversas críticas com liderança sênior.</p></div></div>
+    </div>
+    <p class="section-sub">Para quem é</p>
+    <div class="grid-2" style="margin:14px 0 22px;">
+      <div class="card"><p class="card-title">Profissionais travados na progressão</p><p class="card-body">Que recebem feedbacks como "falta visibilidade" ou "ainda não está pronto" e precisam transformar isso em ação concreta.</p></div>
+      <div class="card"><p class="card-title">Líderes em transição</p><p class="card-body">Que buscam clareza sobre o próximo passo, desenvolvimento de competências executivas ou reposicionamento de carreira.</p></div>
+      <div class="card"><p class="card-title">Profissionais de RH</p><p class="card-body">Que querem avançar para posições de liderança, ampliar influência ou transitar do operacional para o estratégico.</p></div>
+      <div class="card"><p class="card-title">Executivos em recolocação</p><p class="card-body">Que precisam construir narrativa profissional estratégica e ampliar visibilidade no mercado.</p></div>
+    </div>
+    <div class="corp-box">
+      <p class="corp-title">Programa de Mentoria Corporativa</p>
+      <p class="corp-body">Além da mentoria individual, estruturo programas de mentoria personalizados para empresas que querem desenvolver talentos de forma sistemática, reduzir a perda de profissionais críticos e criar uma cultura interna de desenvolvimento. O programa é desenhado sob medida para a realidade e o momento da organização, o nível dos profissionais envolvidos e os objetivos estratégicos de pessoas do negócio.</p>
+      <p class="section-sub" style="margin-top:0;">O que o programa endereça</p>
+      <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Preparação de talentos para promoções e posições de maior responsabilidade</span> com critérios claros e acompanhamento estruturado</p></div>
+      <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Redução do turnover de talentos críticos</span> por meio de desenvolvimento real e reconhecimento proporcional à entrega</p></div>
+      <div class="deliverable-item"><div class="del-dot"></div><p class="del-text"><span class="del-bold">Criação de cultura interna de mentoria sustentável</span> com governança, metodologia e acompanhamento de resultados</p></div>
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <div id="page-contato" class="page">
+    <p class="page-eyebrow">10 · Formas de atuação</p>
+    <h2 class="page-title">Como podemos<br><em>trabalhar juntos</em></h2>
+    <div class="divider"></div>
+    <p class="lead">Três formatos de colaboração, cada um pensado para um contexto e uma necessidade específica.</p>
+    <div class="modalities-grid">
+      <div class="modality"><p class="modality-title">Posição executiva</p><p class="modality-body">Regime CLT em empresas que buscam liderança estratégica de Talent, Cultura ou D&amp;I com escopo regional para a América do Sul.</p></div>
+      <div class="modality"><p class="modality-title">Projetos as a Service</p><p class="modality-body">Entregas em Talent Management, Cultura, Engajamento ou D&amp;I com escopo, prazo e resultado definidos. Pontual ou continuado.</p></div>
+      <div class="modality"><p class="modality-title">Mentoria</p><p class="modality-body">Acompanhamento individual via eMentor.br ou programa corporativo personalizado. Processos de 3, 6 ou 12 meses.</p></div>
+    </div>
+    <div class="contact-block">
+      <p style="font-family:var(--serif);font-size:19px;font-weight:300;color:var(--white);margin-bottom:20px;line-height:1.35;">Pronta para conversar sobre como<br><em style="color:var(--gold-light);">posso contribuir com o seu desafio.</em></p>
+      <a href="mailto:rodeiomariana@gmail.com" class="contact-item"><div class="contact-icon-wrap">📧</div><div><span class="contact-label">E-mail</span><span class="contact-value">rodeiomariana@gmail.com</span></div><span class="contact-arrow">→</span></a>
+      <a href="https://wa.me/5521986480510" target="_blank" rel="noopener" class="contact-item"><div class="contact-icon-wrap">💬</div><div><span class="contact-label">WhatsApp</span><span class="contact-value">(21) 98648-0510</span></div><span class="contact-arrow">→</span></a>
+      <a href="https://www.linkedin.com/in/marianarodeio" target="_blank" rel="noopener" class="contact-item"><div class="contact-icon-wrap">💼</div><div><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/marianarodeio</span></div><span class="contact-arrow">→</span></a>
+      <a href="https://app.ementor.com.br/mentor/marianarodeio/" target="_blank" rel="noopener" class="contact-item"><div class="contact-icon-wrap">🎯</div><div><span class="contact-label">Mentoria · eMentor.br</span><span class="contact-value">app.ementor.com.br/mentor/marianarodeio</span></div><span class="contact-arrow">→</span></a>
+      <a href="https://newslettersemrodeios.substack.com" target="_blank" rel="noopener" class="contact-item"><div class="contact-icon-wrap">✍️</div><div><span class="contact-label">Newsletter</span><span class="contact-value">Sem Rodeios · Substack</span></div><span class="contact-arrow">→</span></a>
+      <a href="https://linktr.ee/rodeiomariana" target="_blank" rel="noopener" class="contact-item"><div class="contact-icon-wrap">🔗</div><div><span class="contact-label">Todos os links</span><span class="contact-value">linktr.ee/rodeiomariana</span></div><span class="contact-arrow">→</span></a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function showPage(id, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    if (btn) btn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
